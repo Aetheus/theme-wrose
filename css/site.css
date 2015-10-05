@@ -2,64 +2,28 @@ html, body{
     height:100%;
 }
 
-
-
-
-.container{
-    max-width:100%;
+#deco{
+    padding-top:50px;
+    background-image: url("../img/hero-image.jpg");
 }
 
-/* If you need to customize navmenu (the sidebar), use the customizer at Jasny Bootstrap to do it, then modify this value to match it*/
-.navbar-default {
-    background-color:#006;
-}
-.navbar-toggle {
-    border:0px;
-    background-color:transparent !important;
+#deco-content{
+    height:300px;
+    padding-top: 200px;
+    padding-bottom:200px;
 }
 
-.navbar {
-  display: block;
-  text-align: center;
-}
-.navbar-brand {
-  display: inline-block;
-  float: none;
-}
-.navbar-toggle {
-  position: absolute;
-  float: right;
-  margin-right: 15px;
-  right:0px;
+.navbar{
+    background: rgba(0,0,0,0.2);
+    border:1px solid rgba(0,0,0,0.3);
 }
 
 
-/* Note that this style is overriden if the screen satisfies the min-width (see @media below) */
-.navmenu {
-  padding-top: 50px;
+section{
+    /*put some styles here*/
 }
 
-@media (max-width: 991px) {
-  .navbar-toggle {
-    display: block; /* force showing the toggle */
-  }
-
-  body {
-    padding-top: 50px;
-  }
-}
-
+/*these will come in handy. make a custom slide-in navmenu using these*/
 @media (min-width: 992px) {
-  body {
-    padding-left: 300px;
-  }
 
-  /* Note that this style is overriden if the screen DOES NOT satisfy the min-width (see .navmenu above) */
-  .navmenu {
-    padding-top: 0;
-  }
-
-  .navbar {
-    display: none !important; /* IE8 fix */
-  }
 }
