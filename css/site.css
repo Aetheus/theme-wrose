@@ -2,25 +2,46 @@ html, body{
     height:100%;
 }
 
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix + .container-fluid {
+    padding-top: 70px;
+}
+
 #deco{
     padding-top:50px;
     background-image: url("../img/hero-image.jpg");
+    background-size:cover;
+    min-height:100%;
 }
-
 #deco-content{
-    height:300px;
     padding-top: 200px;
     padding-bottom:200px;
+
+    font-size:40px;
+    color: #fff;
+    text-shadow: 2px 2px 10px #000000;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#deco-header{
+    font-size:80px;
+    color: #fff;
+    text-shadow: 2px 2px 10px #000000;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .navbar{
-    background: rgba(0,0,0,0.2);
-    border:1px solid rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.7);
+    border:1px solid rgba(0,0,0,0.8);
 }
 
 
 section{
     /*put some styles here*/
+    padding-top:50px;
 }
 
 /*these will come in handy. make a custom slide-in navmenu using these*/
