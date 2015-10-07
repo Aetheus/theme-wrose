@@ -78,5 +78,15 @@ $("document").ready(function (){
         $(this).addClass("active").siblings().removeClass("active");
     })
 
+    /*open g-maps link in phone app where applicable*/
+    $("#googleMap").on("click", function() {
 
+        // if on an iOS device:
+        if( (navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1)){
+            //window.open("maps://maps.google.com/maps?daddr=3.114367, 101.612444&amp;ll=");
+            window.open("http://maps.apple.com/maps/dir//3.114367,101.612444/@3.114198,101.6124309,20z");
+        }else{
+            window.open("http://www.google.com/maps/dir//3.114367,101.612444/@3.114198,101.6124309,20z");
+        }
+    });
 });
