@@ -12,8 +12,8 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 </head>
-<body>
 
+<body data-spy="scroll" data-target=".navbar">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -26,8 +26,26 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
+                    <li><a href="#news">News</a></li>
                     <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#insurance-policies">Insurance Policies</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Insurance Policies<span class="caret"></a></span>
+                        <ul id="navbar-insurance-dropdown-list" class="dropdown-menu">
+                            <li><a data-target="#insurance-policy-motor">Motor Insurance</a></li>
+                            <li><a data-target="#insurance-policy-pa">Personal Accidents</a></li>
+                            <li><a data-target="#insurance-policy-health">Health Insurance</a></li>
+                            <li><a data-target="#insurance-policy-maid">Maids Insurance</a></li>
+                            <li><a data-target="#insurance-policy-fworker">Foreign Workers Insurance</a></li>
+                            <li><a data-target="#insurance-policy-housecontent">Household Content Insurance</a></li>
+                            <li><a data-target="#insurance-policy-houseowner">House Owner Insurance</a></li>
+                            <li><a data-target="#insurance-policy-fire">Fire Insurance</a></li>
+                            <li><a data-target="#insurance-policy-burglary">Burglary Insurance</a></li>
+                            <li><a data-target="#insurance-policy-contract">Contract Insurance</a></li>
+                            <li><a data-target="#insurance-policy-liability">Liability Insurance</a></li>
+                            <li><a data-target="#insurance-policy-other">Other</a></li>
+                        </ul>
+                        <a href="#insurance-policies" style="display:none"> <!--hack to get scrollspy to work--></a>
+                    </li>
                     <li><a href="#location">Location</a></li>
                     <li><a href="#contact-us">Contact</a></li>
                 </ul>
@@ -42,27 +60,90 @@
         </div>
     </div>
 
-
-
     <div class="container">
-        <hr />
-        <section id="about-us">
+        <section id="news">
+            <hr />
             <div class="row">
+                <div class="col-md-2">
+                    <h1>Recent News</h1>
+                </div>
+                <div class="col-md-10">
+                    <div id="news-carousel" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="news-article well">
+                                    <h3 class="news-title">News Article 1</h3>
+                                    <div class="news-content">News goes here news goes here news goes here News goes here news goes here news goes here News goes here news goes here news goes here</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="news-article well">
+                                    <h3 class="news-title">News Article 2</h3>
+                                    <p class="news-content">News goes here news goes here news goes here News goes here news goes here news goes here News goes here news goes here news goes here</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="news-article well">
+                                    <h3 class="news-title">News Article 3</h3>
+                                    <p class="news-content">News goes here news goes here news goes here News goes here news goes here news goes here News goes here news goes here news goes here</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="news-article well">
+                                    <h3 class="news-title">News Article 4</h3>
+                                    <p class="news-content">News goes here news goes here news goes here News goes here news goes here news goes here News goes here news goes here news goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-control-wrapper">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#news-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#news-carousel" data-slide-to="1"></li>
+                            <li data-target="#news-carousel" data-slide-to="2"></li>
+                            <li data-target="#news-carousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#news-carousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#news-carousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us">
+            <hr />
+            <div class="row">
+                <div class="col-md-2">
+                    <h1>About Us</h1>
+                </div>
                 <div class="col-md-3">
-                    <h1>Winterose Corporation</h1>
-                    <div>
+                    <h3 style="text-align:right">Winterose Corporation Sdn Bhd</h3>
+                    <div style="text-align:right">
                         A proud partner of
                         <img src="img/allianz.png" alt="Allianz" style="max-height:30px; display:inline;">
                     </div>
+
+                </div>
+                <div class="col-md-4">
+                    Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here.
                 </div>
                 <div class="col-md-3">
-                    This is the About Us section. Any short blurbs or info about the company should be here.
-                </div>
-                <div class="col-md-3">
-                    Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here.
-                </div>
-                <div class="col-md-3">
-                    Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here.
+                    Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here. Any short blurbs or info about the company should be here.
                 </div>
             </div>
 
@@ -76,81 +157,458 @@
             <div class="row">
                 <div class="col-md-9">
                     <div id="insurance-content">
-                        <h2>Motor Insurance</h2>
-                        <p>
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                        <div class="tab-content">
+                            <div id="insurance-policy-motor" class="tab-pane fade in active">
+                                <h2>Motor Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
 
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                            Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
-                        </p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
 
-                        <p>
-                            For more information, please contact:
-                            <ul>
-                                <li><span class="glyphicon glyphicon-envelope"></span> Email: motor@winterose.com.my</li>
-                                <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
-                                <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
-                            </ul>
-                        </p>
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-travel" class="tab-pane fade in">
+                                <h2>Travel Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
 
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-pa" class="tab-pane fade in">
+                                <h2>Personal Accidents (PA) Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-health" class="tab-pane fade in">
+                                <h2>Health Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-maid" class="tab-pane fade in">
+                                <h2>Maids Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-fworker" class="tab-pane fade in">
+                                <h2>Foreign Worker Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-housecontent" class="tab-pane fade in">
+                                <h2>Household Content Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-houseowner" class="tab-pane fade in">
+                                <h2>House Owner Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-fire" class="tab-pane fade in">
+                                <h2>Fire Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-burglary" class="tab-pane fade in">
+                                <h2>Burglary Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-contract" class="tab-pane fade in">
+                                <h2>Contract Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-liability" class="tab-pane fade in">
+                                <h2>Liability Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div id="insurance-policy-other" class="tab-pane fade in">
+                                <h2>Other Insurance</h2>
+                                <p>
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                    Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here Stuff on the policy goes here
+                                </p>
+
+                                <p>
+                                    For more information, please contact:
+                                    <ul>
+                                        <li><span class="glyphicon glyphicon-envelope"></span> Email: non-motor@winterose.com.my</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78052522</li>
+                                        <li><span class="glyphicon glyphicon-phone"></span> Phone: +603-78042522</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <ul id="insurance-list" class="nav nav-pills nav-stacked">
-                      <li class="active"><a class="insurances" href="#">Motor Insurance</a></li>
-                      <li><a class="insurances" href="#">Travel PA Insurance</a></li>
-                      <li><a class="insurances" href="#">Personal Accidents</a></li>
-                      <li><a class="insurances" href="#">Health Insurance</a></li>
-                      <li><a class="insurances" href="#">Maids Insurance</a></li>
-                      <li><a class="insurances" href="#">Foreign Workers Insurance</a></li>
-                      <li><a class="insurances" href="#">Household Content Insurance</a></li>
-                      <li><a class="insurances" href="#">House Owner Insurance</a></li>
-                      <li><a class="insurances" href="#">Fire Insurance</a></li>
-                      <li><a class="insurances" href="#">Burglary Insurance</a></li>
-                      <li><a class="insurances" href="#">Contract Insurance</a></li>
-                      <li><a class="insurances" href="#">Liability Insurance</a></li>
-                      <li><a class="insurances" href="#">Other</a></li>
+                      <li class="active">
+                          <a class="insurance-pill" data-toggle="pill" href="#insurance-policy-motor" >Motor Insurance</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-travel" >Travel PA Insurance</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-pa" >Personal Accidents</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-health" >Health Insurance</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-maid" >Maids Insurance</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-fworker" >Foreign Workers Insurance</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-housecontent" >Household Content Insurance</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-houseowner">House Owner Insurance</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-fire" >Fire Insurance</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-burglary" >Burglary Insurance</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-contract">Contract Insurance</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-liability" >Liability Insurance</a></li>
+                      <li><a class="insurance-pill" data-toggle="pill" href="#insurance-policy-other">Other</a></li>
                     </ul>
                 </div>
+
             </div>
         </section>
 
 
+<!--
         <section>
             <hr />
             <h1>Filler</h1>
             <pre>
-                If you need any extra sections, note it down
-                this is just filler. blah blah
-                Filler text
+            If you need any extra sections, note it down
+            this is just filler. blah blah
+            Filler text
             </pre>
         </section>
-
-
+-->
 
         <section id="location">
             <hr />
             <h1>Location</h1>
             <dl>
                 <dt>Address:</dt>
-                <dd><div> No 51B, Jalan SS24/8 Taman Megah, 47301 Petaling Jaya, Selangor, Malaysia.  </div></dd>
+                <dd style="margin-left:30px"><div> No 51B, Jalan SS24/8 Taman Megah, 47301 Petaling Jaya, Selangor, Malaysia.  </div></dd>
 
 
                 <dt>Google Maps:</dt>
-                <dd><div id="googleMap" style="width:500px;height:380px;"></div></dd>
+                <dd style="margin-left:30px"><div id="googleMap"></div></dd>
             </dl>
         </section>
 
@@ -170,8 +628,6 @@
             </p>
         </section>
         <hr />
-
-
 
     </div>
 
